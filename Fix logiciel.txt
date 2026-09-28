@@ -1,0 +1,87 @@
+﻿Fixs à faire pour le logiciel :
+
+
+
+
+Général : 
+* Ajouter un tuto rapide et une notice des formules utilisées
+* Traduire l’app en Englais
+* Remplacer les scroll barres éparses par des scroll barres générales sur l’UI 
+* Adapter le format et la résolution à l’écran
+* Onglet paramètre dans l’onglet accueil pour modifier la taille de la police, la résolution etc.
+* Mettre l’onglet Zoom toujours à droite dans les toolbarres
+
+
+Fichiers : 
+* Renommer en accueil
+
+
+Toit & Échelle : 
+* Changer de nom pour “Zone d’implantation”
+* Tracer les mesures en rouge + libellé déplaçable
+* Déplacer le changement de sens des strings dans l’onglet string, et le faire dépendre du layout
+* Retirer un bouton “Appliquer Modifs” en trop dans les paramètres de zone
+
+
+Layout & Blocs : 
+* Indiquer que les dimensions sont celles des panneaux
+* Merge les deux boutons de l’onduleur dans un seul menu déroulant
+* Indiquer “Placer l’onduleur du bloc actif”
+* Retirer la pop up de confirmation au placement d’un onduleur
+* Ajouter un toggle “Les numéros se suivent”
+* Implémenter l’inclinaison et l’orientation des panneaux dans cet onglet
+* Faire en sorte que l’inclinaison et l’orientation, soient pilotables pour chaque panneaux, et applicables pour plusieurs panneaux
+
+
+Stringing :
+* Enregistrer dans le projet les limites min / max des strings
+* Modifier le panneaux latéral pour qui soit sous forme d’arbre comme pour l’onglet MPPT
+* Passer le panneaux latéral à gauche
+* Agrandir et rendre plus lisible les labels des strings (en hoover de souris par exemple)
+* Réordonner les outils de la barre d’outil : 
+Exporter | Générer | Menu de configuration | Menu d’action | String active | → Zoom 
+* Indiquer dans le widget en bas que la longueur totale est la longueur totale des strings
+
+
+Répartition MPPT : 
+* Créer un export CSV
+* Passer le panneaux à gauche
+* Tool bar : Action MPPT | String courante | Export CSV | Configuration | → Zoom
+* Mettre dans Action MPPT : Distribuer les strings, Vider les strings, Griser les strings non sélectionnées
+
+
+Chemins :
+* Mettre le menu polygone dans Toit & Échelle
+* Mettre tout ce qui est relatif au câblage dans l’onglet des câbles
+* Mettre tous ce qui est relatif aux mesures dans le menu de mesures de l’onglet Toit & Échelle
+* Supprimer cet onglet
+
+
+Ombre Pylône : 
+* Changer le nom en “Ombre”
+* Changer le terme “pylône” en “obstacle”, plus général
+* Retirer les boutons “calculer l’ombre au profit d’un calcul automatique à chaque changement
+* Dans la simulation multi-jours, remplacer le graphique mensuel sur l’année en un graphique customisable affichable à la fin d’une simulation (graphique barre ou pas, si barre, barre tous les combien etc.)
+* Retirer les commentaires généraux affichés dan l’UI
+* Permettre la navigation au drag dans la heatmap.
+* Mettre plus en valeur les stats : pertes énergétiques etc.
+
+
+Matériel : 
+* Changer le nom pour “Feuille de calcul”
+* Transformer le panneau latéral en un explorateur de variables plus efficace que les menus déroulants des inserts
+* Supprimer le blabla dans la toolbar au profit de : 
+Fichier | Graphiques | Outils | → Zoom
+* Ajouter plus de variables intéressantes dans l’explorateur : Irradiation moyenne, etc.
+* Améliorer la qualité globale du spreadsheet
+
+
+Schéma unifilaire : 
+   * Renommer en “Diagramme unifilaire”
+   * Menu déroulant pour les liens personnalisé avec différents types de traits
+   * Proposer un affichage des puissances, Voc, Vmmpt etc. en renseignant les infos nécessaires dans une fenêtre contextuelle
+
+
+Câblage & Notes :  
+      * Renommer en “Câblage”
+      * Refonte complète avec les ajouts nécessaires
