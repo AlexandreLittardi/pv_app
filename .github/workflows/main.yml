@@ -1,0 +1,48 @@
+name: Build Windows EXE
+
+on:
+  workflow_dispatch:        # lancement manuel depuis l'onglet Actions
+  push:
+    tags:
+      - "v*"                # ex: git tag v1.0.0 && git push --tags
+
+permissions:
+  contents: write           # nécessaire pour publier la Release
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt pyinstaller
+
+      - name: Construire l'exe
+        shell: bash
+        run: |
+          pyinstaller --noconfirm --clean --onefile --windowed \
+            --name PV_App \
+            --add-data "docs;docs" \
+            --collect-data tzdata \
+            --hidden-import PIL._tkinter_finder \
+            main.py
+
+      - name: Sauvegarder l'exe (artefact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: PV_App-windows
+          path: dist/PV_App.exe
+
+      - name: Publier la Release (sur tag uniquement)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/PV_App.exe
